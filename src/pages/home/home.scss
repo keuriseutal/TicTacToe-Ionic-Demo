@@ -1,3 +1,32 @@
 page-home {
+}
 
+:root{
+    --btn-bg-color: black;
+}
+
+.body {
+  background-color: black !important;
+  color: white !important;
+  text-align: center;   
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+button{
+    width: 90%;
+    height: 100px !important;
+    font-size: 50px !important;
+    color: red !important;
+    background-color: var(--btn-bg-color) !important;
+}
+
+button#restart{
+    width: auto;
+    height: 100px !important;
+    color: white !important;
 }

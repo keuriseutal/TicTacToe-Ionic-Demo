@@ -1,14 +1,35 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding class="body">
+  <div class="title">Tic Tac Toe</div>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <br />
+  <br />
+  <div *ngIf="!isGameOver">{{currentPlayer}}'s turn</div>
+  <div *ngIf="isGameOver">GAME OVER</div>
+  <br />
+  <br />
+
+  <ion-grid no-padding>
+    <ion-row justify-content-around>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(1)">{{one}}</button></ion-col>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(2)">{{two}}</button></ion-col>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(3)">{{three}}</button></ion-col>
+    </ion-row>
+
+    <ion-row justify-content-around>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(4)">{{four}}</button></ion-col>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(5)">{{five}}</button></ion-col>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(6)">{{six}}</button></ion-col>
+    </ion-row>
+
+    <ion-row justify-content-around>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(7)">{{seven}}</button></ion-col>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(8)">{{eight}}</button></ion-col>
+        <ion-col col-4><button ion-button color="light" outline (click)="nextTurn(9)">{{nine}}</button></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br />
+  <br />
+  <br />
+  <button ion-button id="restart" (click)='restart()'><ion-icon name="ios-refresh-circle-outline"></ion-icon></button>
 </ion-content>
